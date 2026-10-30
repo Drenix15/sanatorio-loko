@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14251e">
+
+    <title>Sanatorio LOKO | Expediente 001</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- EFECTOS DE FONDO -->
+    <div class="background-effects">
+        <div class="noise"></div>
+        <div class="floating-symbols" id="floatingSymbols"></div>
+    </div>
+
+    <!-- PANTALLA DE BIENVENIDA -->
+    <section id="welcomeScreen" class="welcome-screen">
+
+        <div class="welcome-card">
+
+            <span class="warning-label">
+                ⚠️ SANATORIO LOKO ⚠️
+            </span>
+
+            <h1>¡ALERTA!</h1>
+
+            <p>
+                Se ha detectado una actividad
+                extremadamente sospechosa.
+            </p>
+
+            <div class="patient-warning">
+                <span>🚨</span>
+                <h2>EL PACIENTE ESTÁ DE CUMPLEAÑOS</h2>
+                <span>🚨</span>
+            </div>
+
+            <p class="welcome-description">
+                Se requiere autorización para ingresar
+                al pabellón de Juan Antonio.
+            </p>
+
+            <button id="enterButton" class="main-button">
+                INGRESAR AL SANATORIO 🏥
+            </button>
+
+            <small>
+                Advertencia: el personal no se responsabiliza
+                por ataques de risa. Atte: Sharumi Torres
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="mainContent" class="main-content hidden">
+
+        <!-- CABECERA -->
+        <header class="main-header">
+
+            <div class="hospital-logo">
+                🏥 SANATORIO LOKO
+            </div>
+
+            <span class="header-status">
+                ● SISTEMA EN OBSERVACIÓN
+            </span>
+
+        </header>
+
+
+        <!-- PORTADA -->
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="section-label">
+                    EXPEDIENTE CLÍNICO N.º 001
+                </span>
+
+                <h1>
+                    FELIZ CUMPLEAÑOS
+                    <span>JUAN ANTONIO</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    También conocido como...
+                </p>
+
+                <div class="loko-title">
+                    LOKOOOO 🤡
+                </div>
+
+                <p class="hero-description">
+                    Hoy no celebramos un año más de vida.
+                    Celebramos un nuevo episodio de este
+                    fenómeno inexplicable pero siempre un gran amigo.
+                </p>
+
+                <button id="openFileButton" class="main-button">
+                    📋 ABRIR HISTORIAL CLÍNICO
+                </button>
+
+            </div>
+
+            <!-- FOTO DEL CUMPLEAÑERO -->
+            <div class="hero-photo-container">
+
+                <div class="photo-stamp">
+                    PACIENTE IDENTIFICADO
+                </div>
+
+                <div class="hero-photo">
+                    <img
+                        src="img/juan-antonio.jpg"
+                        alt="Juan Antonio, alias Loko"
+                        id="mainPhoto"
+                    >
+                </div>
+
+                <span class="photo-caption">
+                    SUJETO: JUAN ANTONIO
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPEDIENTE -->
+        <section id="medicalFile" class="section medical-file">
+
+            <div class="file-header">
+                <h2>📁 HISTORIA CLÍNICA</h2>
+                <span>DOCUMENTO CONFIDENCIAL</span>
+            </div>
+
+            <div class="file-content">
+
+                <div class="file-data">
+                    <p><strong>Nombre:</strong> Juan Antonio</p>
+                    <p><strong>Alias:</strong> LOKO</p>
+                    <p><strong>Estado:</strong> Cumpleañero</p>
+                    <p><strong>Clasificación:</strong> Caso extraordinario</p>
+                    <p><strong>Pronóstico:</strong> MULTIPLES PERSONALIDES</p>
+                </div>
+
+                <div class="diagnosis">
+                    <h3>DIAGNÓSTICO PRELIMINAR</h3>
+
+                    <p>
+                        El paciente presenta mas 13 personalidades
+                        registradas por el momento se manisfestaron 5. Se recomienda mantener una
+                        distancia prudente y no cuestionar sus
+                        decisiones durante el dia.
+                    </p>
+
+                    <div class="doctor-note">
+                        Nota del especialista:
+                        "No sabemos qué tiene, pero nos cae bien".
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONALIDADES -->
+        <section class="section personalities-section">
+
+            <div class="section-heading">
+                <span class="section-label">
+                    ÁREA DE OBSERVACIÓN
+                </span>
+
+                <h2>LAS CINCO PERSONALIDADES</h2>
+
+                <p>
+                    Selecciona una personalidad para consultar
+                    su historial.
+                </p>
+            </div>
+
+            <div class="personality-grid">
+
+                <button class="personality-card active"
+                        data-personality="normal">
+
+                    <span class="personality-icon">🙂</span>
+                    <h3>Juan Antonio</h3>
+                    <p>Estado aparentemente normal</p>
+
+                </button>
+
+                <button class="personality-card"
+                        data-personality="loco">
+
+                    <span class="personality-icon">🤡</span>
+                    <h3>El Loco</h3>
+                    <p>LAPIZ = ARBOL</p>
+
+                </button>
+
+                <button class="personality-card"
+                        data-personality="bestia">
+
+                    <span class="personality-icon">🦍</span>
+                    <h3>La Bestia</h3>
+                    <p>Modo jefe final</p>
+
+                </button>
+
+                <button class="personality-card"
+                        data-personality="celoso">
+
+                    <span class="personality-icon">👀</span>
+                    <h3>El Estudiante Eterno</h3>
+                    <p>Magister en Economia</p>
+
+                </button>
+
+                <button class="personality-card"
+                        data-personality="jhon">
+
+                    <span class="personality-icon">🇬🇧</span>
+                    <h3>Jhon Antony</h3>
+                    <p>English mode activated</p>
+
+                </button>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DINÁMICA -->
+            <div class="personality-detail" id="personalityDetail">
+
+                <span class="detail-label">
+                    INFORME DEL PACIENTE
+                </span>
+
+                <h3 id="personalityName">
+                    🙂 Juan Antonio
+                </h3>
+
+                <p id="personalityDescription">
+                    La versión aparentemente normal del paciente.
+                    Saluda, conversa y parece una persona funcional.
+                    El personal confirma que esta personalidad existe.
+                </p>
+
+                <div class="meme-box">
+                    <span>📢 OBSERVACIÓN:</span>
+
+                    <p id="personalityMeme">
+                        "Hola, soy Juan Antonio".
+                        Juan Antonio, justo antes del incidente.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+        <section class="section gallery-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    EVIDENCIA FOTOGRÁFICA
+                </span>
+
+                <h2>ARCHIVO DE INCIDENTES</h2>
+
+                <p>
+                    Recuerdos del paciente y sus cómplices.
+                </p>
+
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-placeholder">
+                    📸
+                    <p>Fotografía del grupo 01</p>
+                </div>
+
+                <div class="gallery-placeholder">
+                    🤣
+                    <p>Fotografía del grupo 02</p>
+                </div>
+
+                <div class="gallery-placeholder">
+                    💀
+                    <p>Fotografía del grupo 03</p>
+                </div>
+
+            </div>
+
+            <label class="upload-button">
+                ＋ AÑADIR FOTOGRAFÍAS
+
+                <input
+                    type="file"
+                    id="photoUpload"
+                    accept="image/*"
+                    multiple
+                    hidden
+                >
+            </label>
+
+        </section>
+
+
+        <!-- MENSAJE DE LOS AMIGOS -->
+        <section class="section birthday-message">
+
+            <span class="section-label">
+                COMUNICADO DEL PERSONAL
+            </span>
+
+            <h2>UN MENSAJE PARA EL PACIENTE</h2>
+
+            <div class="letter">
+
+                <p>Querido Juan Antonio:</p>
+
+                <p>
+                    Hoy es un día especial porque celebramos
+                    que sigues siendo parte de nuestras vidas
+                    y de todas esas historias que algún día
+                    tendremos que contar.
+                </p>
+
+                <p>
+                    Gracias por las risas, las ocurrencias,
+                    las locuras y los momentos que hacen
+                    que esta amistad sea única.
+                </p>
+
+                <p>
+                    Que este nuevo año venga lleno de salud,
+                    alegrías, sueños cumplidos y muchas
+                    aventuras más.
+                </p>
+
+                <p>
+                    Nunca pierdas esa forma tan tuya de ser.
+                    Porque, aunque a veces el personal no sepa
+                    cómo manejarte, sabemos que eres alguien
+                    muy especial para nosotros.
+                </p>
+
+                <h3>
+                    ¡FELIZ CUMPLEAÑOS, LOKO! 🎂
+                </h3>
+
+                <p class="signature">
+                    Con cariño, tus amigos y el personal
+                    del Sanatorio LOKO. ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGALO SORPRESA -->
+        <section class="section surprise-section">
+
+            <div class="gift-container">
+
+                <span class="section-label">
+                    ÚLTIMO PROCEDIMIENTO
+                </span>
+
+                <h2>¿AUTORIZAMOS EL ALTA MÉDICA?</h2>
+
+                <p>
+                    El paciente tiene derecho a recibir
+                    todos los saludos de los integrantes.
+                </p>
+
+                <button id="giftButton" class="main-button">
+                    🎁 ABRIR REGALO
+                </button>
+
+                <div id="giftMessage" class="gift-message hidden">
+
+                    <h2>¡ALTA MÉDICA DENEGADA!</h2>
+
+                    <p>
+                        No podemos dejarte ir todavía.
+                        ¡Primero tienes que enviar foto
+                        de la torta c:!
+                    </p>
+
+                    <div class="celebration">
+                        🥳 🎂 🎉 🎈
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="footer">
+
+            <p>
+                SANATORIO LOKO © 2026
+            </p>
+
+            <p>
+                Departamento de casos inexplicables.
+            </p>
+
+            <span>
+                "No estamos locos, somos incomprendidos".
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
